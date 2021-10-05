@@ -1,0 +1,447 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  background-size: cover;
+}
+
+.root {
+  position: relative;
+}
+
+body {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+hr {
+  border-top: 1px solid #000;
+}
+
+.Body-container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.Body-container .Body-app {
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 64%;
+  padding: 1em;
+}
+
+.Body-container .Body-app .Pratice-indicator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.5em;
+}
+
+.Body-container .Body-app .Pratice-indicator .Indicator-gauges {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  width: 50%;
+}
+
+.Body-container .Body-app .Pratice-indicator .Indicator-gauges .Indicator-gauges-Practice {
+  display: block;
+  margin-right: 1em;
+  background-color: #344154;
+  padding: 0.2em;
+  border-radius: 0.5em;
+  width: auto;
+  text-align: center;
+}
+
+.Body-container .Body-app .Pratice-indicator .Indicator-gauges .Indicator-gauges-Practice .name {
+  color: #C4C4C4;
+}
+
+.Body-container .Body-app .Pratice-indicator .Indicator-gauges .Indicator-gauges-Practice .name, .Body-container .Body-app .Pratice-indicator .Indicator-gauges .Indicator-gauges-Practice .Value, .Body-container .Body-app .Pratice-indicator .Indicator-gauges .Indicator-gauges-Practice .ValueDelta-default {
+  font-size: 12px;
+}
+
+.Body-container .Body-app .Pratice-indicator .Indicator-gauges .Indicator-gauges-Practice .Value {
+  color: #FFFFFF;
+}
+
+.Body-container .Body-app .Pratice-indicator .Pratice-control {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 1.4em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Body-container .Body-app .Pratice-indicator .Pratice-control .control-icon {
+  width: 1em;
+  margin-left: 0.7em;
+  cursor: pointer;
+}
+
+.Body-container .Body-app .Pratice-indicator .Pratice-control .setting {
+  background-color: #344154;
+  border-radius: 0.6em;
+  padding: 0.2em;
+  margin-left: 0.7em;
+  height: 1.4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.Body-container .Body-app .Pratice-indicator .Pratice-control .setting svg {
+  height: 60%;
+  margin-left: 1em;
+}
+
+.Body-container .Body-app .Pratice-indicator .Pratice-control .setting span {
+  color: #F2F2F2;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 1em;
+  margin-right: 1.4em;
+}
+
+.Body-container .Body-app .Keyboard-layout-container {
+  max-width: 100%;
+  height: 100%;
+  margin-top: 1.7em;
+}
+
+.Body-container .Body-app .TextBox {
+  margin-bottom: 1em;
+}
+
+.Body-container .Body-app .TextBox .startIndicator {
+  position: fixed;
+  -webkit-transform: translateY(-1.4em);
+          transform: translateY(-1.4em);
+  left: 45%;
+}
+
+.Body-container .Body-app .TextBox .quote {
+  cursor: text;
+  padding: 1.7em;
+  border-radius: 0.8em;
+  background-color: #FFFFFF;
+}
+
+.Body-container .Body-app .TextBox .quote span {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  display: inline-block;
+  text-align: center;
+  border-radius: 0.1em;
+  width: 0.8em;
+  margin: 0 0.05em;
+}
+
+.Body-container .Body-app .Indicator-keyset {
+  font-size: 12px;
+  font-weight: 400;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Body-container .Body-app .Indicator-keyset .key {
+  border-radius: 0.1em;
+  color: black;
+  font-size: 12px;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  background-color: #F0E7E2;
+  margin: 0 0.1em;
+  width: 2em;
+}
+
+.navbar {
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 180px;
+  height: 100%;
+  background-color: #344154;
+  border-top-right-radius: 1.2em;
+  border-bottom-right-radius: 1.2em;
+}
+
+.navbar .logo {
+  height: 5em;
+}
+
+.navbar .logo a {
+  -webkit-transform: translateY(-3.2em);
+          transform: translateY(-3.2em);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .logo a svg {
+  width: 2em;
+  border-radius: 0.2em;
+}
+
+.navbar .logo a h1 {
+  margin-left: 0.5em;
+  color: #FFFFFF;
+  font-size: 19px;
+}
+
+.navbar .logo a h1 span {
+  color: #FFBD9B;
+}
+
+.navbar .navmenu-setting {
+  height: 40px;
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
+  background-color: #0A1D37;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .navmenu-setting .setting {
+  width: 20px;
+  margin-top: 0.2em;
+  margin: 0 0.3em;
+  cursor: pointer;
+}
+
+.navbar .navmenu-setting .ThemeSetting {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.6em 3em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .navmenu-setting .ThemeSetting .iconbutton {
+  width: 20px;
+  margin-top: 0.2em;
+  margin: 0 0.3em;
+  cursor: pointer;
+}
+
+.navbar .navmenu-item {
+  padding: 0.4em 1em;
+}
+
+.navbar .navmenu-item .navlink {
+  border-radius: 0.6em;
+  height: 2.4em;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #424F63;
+}
+
+.navbar .navmenu-item .navlink .Menu-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1em;
+  margin-left: 0.7em;
+}
+
+.navbar .navmenu-item .navlink span {
+  -webkit-transition-delay: 600ms;
+          transition-delay: 600ms;
+  margin-left: 2em;
+  color: #FFFFFF;
+  font-size: 13px;
+}
+
+.navbar .navmenu-item .navlink:hover {
+  background-color: #6D7889;
+}
+
+.navbar .signIn {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 130px;
+}
+
+.navbar .signIn img {
+  height: 40px;
+}
+
+.navbar .navmenu-item-profile {
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
+  border-bottom-right-radius: 1.2em;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  width: 180px;
+  height: 5em;
+}
+
+.navbar .navmenu-item-profile .sign-in {
+  -webkit-box-shadow: 2px 2px 2px #888888;
+          box-shadow: 2px 2px 2px #888888;
+  border-radius: 0.4em;
+  padding: 0.6em 0.5em;
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+  background-color: #7AC2C5;
+  border: none;
+  text-decoration: none;
+}
+
+.navbar .navmenu-item-profile .sign-out {
+  right: 10%;
+  top: 7%;
+  position: absolute;
+  cursor: pointer;
+  width: 16px;
+}
+
+.navbar .navmenu-item-profile .profileLink {
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar .navmenu-item-profile .profileLink .Avatar-customImage {
+  border-radius: 3em;
+  width: 45px;
+}
+
+.navbar .navmenu-item-profile .profileLink .profile-name {
+  margin-left: 0.3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.navbar .navmenu-item-profile .profileLink .profile-name span {
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.navTab {
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
+  cursor: pointer;
+  -webkit-transform: translateY(-3em);
+          transform: translateY(-3em);
+  border-radius: 0 0.6em 0.6em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20px;
+  height: 110px;
+  background-color: #6D7889;
+  top: 50%;
+  left: 180px;
+  position: fixed;
+}
+
+.navTab svg {
+  height: 35px;
+}
+/*# sourceMappingURL=style.css.map */
